@@ -117,6 +117,15 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
       end,
     },
+    config = function()
+      require('gitsigns').setup {
+        current_line_blame = true,
+        current_line_blame_opts = {
+          delay = 1000,
+          virt_text_pos = 'eol',
+        },
+      }
+    end,
   },
 
   {
