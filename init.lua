@@ -575,11 +575,11 @@ local servers = {
     }
   },
   grammarly = {
-    filetypes = { 'markdown' },
+    filetypes = { 'markdown', 'norg' },
   },
+  tsserver = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
