@@ -23,3 +23,4 @@ sign({ name = 'DiagnosticSignInfo', text = '»' })
 -- })
 
 vim.filetype.add({ extension = { templ = "templ" } })
+
