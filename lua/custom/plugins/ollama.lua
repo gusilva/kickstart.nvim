@@ -13,7 +13,7 @@ return {
 		}
 
 		require('gen').setup({
-			model = "codellama", -- The default model to use.
+			model = "deepseek-coder", -- The default model to use.
 			display_mode = 'split',
 		})
 

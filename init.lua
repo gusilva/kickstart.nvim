@@ -629,25 +629,25 @@ local servers = {
       },
     },
   },
-  ltex = {
-    filetypes = { 'markdown', 'norg' },
-    dictionary = {
-      enabled = { 'tex', 'latex', 'bib', 'markdown', 'go' },
-      language = 'en',
-      diagnosticSeverity = 'information',
-      setenceCacheSize = 2000,
-      additionalRules = {
-        enablePickyRules = true,
-        motherTonque = true,
-      },
-      trace = {
-        server = 'verbose',
-      },
-      dictionary = {},
-      disabledRules = {},
-      hiddenFalsePositives = {},
-    }
-  },
+  -- ltex = {
+  --   filetypes = { 'markdown', 'norg' },
+  --   dictionary = {
+  --     enabled = { 'tex', 'latex', 'bib', 'markdown', 'go' },
+  --     language = 'en',
+  --     diagnosticSeverity = 'information',
+  --     setenceCacheSize = 2000,
+  --     additionalRules = {
+  --       enablePickyRules = true,
+  --       motherTonque = true,
+  --     },
+  --     trace = {
+  --       server = 'verbose',
+  --     },
+  --     dictionary = {},
+  --     disabledRules = {},
+  --     hiddenFalsePositives = {},
+  --   }
+  -- },
   grammarly = {
     filetypes = { 'markdown', 'norg' },
   },
@@ -673,7 +673,7 @@ local servers = {
   },
   tflint = {
   },
-  terraform = {
+  terraformls = {
     filetypes = { 'terraform', 'tf', 'tfvars' },
   },
 }

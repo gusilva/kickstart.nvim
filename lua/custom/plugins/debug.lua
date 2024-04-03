@@ -61,7 +61,8 @@ return {
         port = "2345",
         -- additional args to pass to dlv
         -- port = "${port}",
-        args = {}
+        args = {},
+        build_flags = "-tags=unit,integration,e2e",
       },
     }
 
@@ -99,11 +100,13 @@ return {
             -- Elements can be strings or table with id and size keys.
             { id = "scopes",      size = 0.75 },
             { id = "breakpoints", size = 0.25 },
+            { id = "watches",     size = 0.25 },
+
             -- "breakpoints",
             -- "stacks",
             -- "watches",
           },
-          size = 40, -- 40 columns
+          size = 80, -- 40 columns
           position = "left",
         },
         {
@@ -136,10 +139,12 @@ return {
     }
 
     -- Basic debugging keymaps, feel free to change to your liking!
-    vim.keymap.set('n', '<F5>', dap.continue, { desc = 'dap run/continue debug' })
+    -- vim.keymap.set('n', '<F5>', dap.continue, { desc = 'dap run/continue debug' })
+    vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'dap run/continue debug' })
     vim.keymap.set('n', '<F4>', dap.terminate, { desc = 'dap stop debug' })
     vim.keymap.set('n', '<F1>', dap.step_into, { desc = 'dap step into' })
-    vim.keymap.set('n', '<F2>', dap.step_over, { desc = 'dap step over' })
+    -- vim.keymap.set('n', '<F2>', dap.step_over, { desc = 'dap step over' })
+    vim.keymap.set('n', '<leader>do', dap.step_over, { desc = 'dap step over' })
     vim.keymap.set('n', '<F3>', dap.step_out, { desc = 'dap step out' })
     -- vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'dap open repl' })
     vim.keymap.set('n', '<leader>td', dap_go.debug_test, { desc = 'dap debug test' })
