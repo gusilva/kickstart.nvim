@@ -62,7 +62,7 @@ return {
         -- additional args to pass to dlv
         -- port = "${port}",
         args = {},
-        build_flags = "-tags=unit,integration,e2e",
+        build_flags = "-v -tags=unit,integration,e2e",
       },
     }
 

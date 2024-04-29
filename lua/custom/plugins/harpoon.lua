@@ -1,7 +1,14 @@
 return {
 	'thePrimeagen/harpoon',
 	dependencies = { 'nvim-lua/plenary.nvim' },
-	config = function ()
+	config = function()
+		require('harpoon').setup({
+			menu = {
+				width = 100,
+				-- width = vim.api.nvim_win_get_width(0) - 2,
+			}
+		})
+
 		local mark = require('harpoon.mark')
 		vim.keymap.set("n", "<leader>ha", mark.add_file, { desc = "[H]arpoon [A]dd file" })
 
